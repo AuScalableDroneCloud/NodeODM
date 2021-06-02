@@ -37,7 +37,7 @@ jobs:
           ${{ steps.docker_meta.outputs.tags }}
           auscalabledronecloud/nodeodm:latest
     - name: Build and push GPU Docker image
-      id: docker_build
+      id: docker_build_gpu
       uses: docker/build-push-action@v2
       with:
         file: ./Dockerfile.gpu
